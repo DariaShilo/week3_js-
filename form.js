@@ -14,6 +14,8 @@ function check(){
         document.getElementById('errsurname').innerHTML  = "";
         document.getElementById('errgender').innerHTML  = "";
         document.getElementById('errcountry').innerHTML  = "";
+        document.getElementById('errpass').innerHTML  = "";
+        document.getElementById('errmail').innerHTML  = "";
 
         if(name.value == ""){
             document.getElementById('errname').innerHTML += "Введите имя";
@@ -45,11 +47,10 @@ function check(){
   
       
         
-        if (name.value == "" || email.value == "" || surname.value == "" || password.value == "" || checkbox.checked == false || country.selectedIndex == 0 ||male.checked == false && female.checked == false  ) {
-            document.getElementById('error').innerHTML += "Не все поля заполнены <br>";
+        if (name.value == " " || email.value == " " || surname.value == " " || password.value == " " || checkbox.checked == true || country.selectedIndex == true || male.checked == true || female.checked == true  ) {
+           
+            document.getElementById('rezult').innerHTML += `<br>${name.value} , добро пожаловать `
          }  
-         else{
-             document.getElementById('rezult').innerHTML += `<br>${name.value} , добро пожаловать `
-         }
+    
        
         }
