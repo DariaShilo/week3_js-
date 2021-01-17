@@ -7,6 +7,7 @@ function check(){
         let country = document.getElementById('country');
         let male = document.getElementById('male');
         let female = document.getElementById('female');
+        let gender = document.querySelector('input[name = "gender"]:checked');
 
         document.getElementById('error').innerHTML = "";
         document.getElementById('rezult').innerHTML  = "";
@@ -16,6 +17,7 @@ function check(){
         document.getElementById('errcountry').innerHTML  = "";
         document.getElementById('errpass').innerHTML  = "";
         document.getElementById('errmail').innerHTML  = "";
+        document.getElementById('errcheckbox').innerHTML = "";
 
         if(name.value == ""){
             document.getElementById('errname').innerHTML += "Введите имя";
@@ -40,17 +42,14 @@ function check(){
         }
 
         if (checkbox.checked == false){
-            document.getElementById('error').innerHTML += "Согласитесь с условиями пользования <br>";
+            document.getElementById('errcheckbox').innerHTML += "Согласитесь с условиями пользования <br>";
         }
         
 
-  
-      
-        
-        if (name.value == " " || email.value == " " || surname.value == " " || password.value == " " || checkbox.checked == true || country.selectedIndex == true || male.checked == true || female.checked == true  ) {
-           
-            document.getElementById('rezult').innerHTML += `<br>${name.value} , добро пожаловать `
+        if (name.value == "" || email.value == "" || surname.value == "" || password.value == "" || checkbox.checked == false || country.selectedIndex == 0 ||male.checked == false && female.checked == false  ) {
+            document.getElementById('error').innerHTML += "Регистрация не завершена<br>";
          }  
-    
-       
+         else{
+             document.getElementById('rezult').innerHTML += `<br>${name.value} , добро пожаловать `
+         }
         }
