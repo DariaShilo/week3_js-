@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> 
+   
+  <label for="theme">Выбрать тему:</label>
+    <select class="size:1" name="theme" id="select" onchange="themeMe()">
+        <option disabled selected="selected" >Выберите тему: </option>
+        <option value="dark" >Темная</option>
+        <option value="bright">Яркая</option>
+        <option value="light">Светлая</option>
+      </select>
+
+    <div>
+<h1>мой сайт</h1>
+        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/15F80/production/_109448998_cats2.jpg" alt="">
+        <p>
+            Тот, кто не может понять свою кошку, не может понять вообще ничего.
+        </p>
+
+    </div>
+</div>
+    <script >
+function themeMe(){
+    if(document.getElementById("select").value == "dark"
+    ) 
+    document.body.style.background = 'DarkSlateGray';
+    if(document.getElementById("select").value == "bright"
+    ) 
+    document.body.style.background = 'DeepPink';
+    if(document.getElementById("select").value == "light"
+    ) 
+    document.body.style.background = 'Cornsilk';
+}
+
+
+
+
+    </script>
+</body>
+</html>

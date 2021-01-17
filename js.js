@@ -1,41 +1,25 @@
+let num1 = Number(document.getElementById("1number").value);
+let num2 = Number(document.getElementById("2number").value);
 
-
-function summa() {
-    let num1 = Number(document.getElementById("1number").value);
-num2 = Number(document.getElementById("2number").value);
-result = num1 + num2;
-document.getElementById("result").innerHTML = result;
-     
-          
+function summa(num1,num2) {
+    result = num1 + num2;
+    document.getElementById("result").innerHTML = result;      
 }
-function division(){
-    let num1 = document.getElementById("1number").value;
-    num2 = document.getElementById("2number").value;
+
+function division(num1,num2){
     if (num2 == 0) {
        alert("На 0 делить нельзя!")}
 else{ result = num1 / num2;
     document.getElementById("result").innerHTML = result;}
-      
     } 
    
  
-function subtract() {
-    let num1 = document.getElementById("1number").value;
-         num2 = document.getElementById("2number").value;
+function subtract(num1,num2) {
          result = num1 - num2;
          document.getElementById("result").innerHTML = result;
-   
 }
-
     
-
-
-    
-    
-    
-function multiply() {
-    let num1 = document.getElementById("1number").value;
-        num2 = document.getElementById("2number").value;
+function multiply(num1,num2) {
         result = num1 * num2;
         document.getElementById("result").innerHTML = result;
     }

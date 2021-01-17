@@ -14,10 +14,10 @@
     <input type="text" name="2number" id="2number">
  <output name="result" id="result">0</output></p>
 </form>
-    <button onclick="summa();">Сложение </button>
-    <button onclick="subtract();">Вычитание</button>
-    <button onclick="division();">Деление</button>
-    <button onclick="multiply();">Умножение</button>
+    <button onclick="summa(Number(document.getElementById('1number').value),(Number(document.getElementById('2number').value)));">Сложение </button>
+    <button onclick="subtract(Number(document.getElementById('1number').value),(Number(document.getElementById('2number').value)));">Вычитание</button>
+    <button onclick="division(Number(document.getElementById('1number').value),(Number(document.getElementById('2number').value)));">Деление</button>
+    <button onclick="multiply(Number(document.getElementById('1number').value),(Number(document.getElementById('2number').value)));">Умножение</button>
     <script src="js.js"> </script>
 </body>
 </html>

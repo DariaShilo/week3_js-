@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color:rgb(91, 91, 235)
+    }
+    form{
+        background-color: Cornsilk;
+        width: 50%;
+       
+        margin: 0px auto;
+        
+    }
+    input{
+        margin: 10px;
+    }
+    label {
+        margin: 10px;
+    }
+    #error{
+        color: red;
+        font-size: 20px;
+    
+    }
+    #rezult{
+        color:green;
+        font-size: 20px;
+    }
+    .errMessage{
+        color: red;
+        font-size: 12px;
+        padding: 0;
+  
+    }
+</style>
+<body >
+    
+   <h1 >Для регистации заполните форму:</h1>
+   <form action=""> 
+   <label for="name">Имя</label>
+   <input type="text" name="name" id="name" > 
+   <span id="errname" class="errMessage"></span><br>
+  
+
+   <label for="surname">Фамилия</label>
+   <input type="text" name="surname" id="surname">
+   <span id="errsurname" class="errMessage"></span><br> <br>
+
+   <label for="gender ">Пол:</label>
+   <input type="radio" name="gender" value="female" id="female">Женщина
+   <input type="radio" name="gender" value="male" id="male">Мужчина
+   <span id="errgender" class="errMessage"></span> <Br>
+
+    <label>Страна:</label>
+    <select name="country" id="country">
+    <option disabled selected="selected" >Выберите страну: </option>
+      <option value="France">Франция</option>
+      <option value="Russia">Россия</option>
+      <option value="Ukraine">Украина</option>
+    </select> 
+    <span id="errcountry" class="errMessage"></span><br>
+
+    <label for="mail ">Введите e-mail:</label>
+    <input type="email" name="mail" id="mail">
+    <span id="errmail" class="errMessage"></span>
+   <br>
+
+
+    <label for="pass">Введите пароль:</label>
+    <input type="password" name="pass" id="password"> 
+    <span id="errpass" class="errMessage"></span>
+    <br>
+
+ 
+
+    <input type="checkbox" name="terms" id="checkbox">
+    Я согласен с <a href="/terms">условиями использования</a> <br>
+
+
+    <div id="error">
+
+    </div>
+    <button type="button" onclick="check();">
+        Зарегистрироваться
+      </button>
+      <div id="rezult">
+
+      </div>
+
+     
+  </label>
+   </form>
+   <script src="form.js"> </script>
+</body>
+
+
+</html>
